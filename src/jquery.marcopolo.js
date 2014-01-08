@@ -579,7 +579,7 @@
             // Select the currently highlighted item. Input loses focus.
             case self.keys.TAB:
               // Prevent selection if the list isn't visible.
-              if (!$list.is(':visible')) {
+              if (!$list.is(':visible') || self.ajax) {
                 return;
               }
 
